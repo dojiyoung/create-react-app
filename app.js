@@ -2,9 +2,6 @@
 const express = require("express");
 const cors = require("cors");
 
-// routes
-const books = require("./routes/api/books");
-
 const app = express();
 
 app.get("/", (req, res) => res.send("Hello world!"));
@@ -23,6 +20,8 @@ try {
 
   connectDB();
 
+  // routes
+  const books = require("./routes/api/books");
   // use Routes
   app.use("/api/books", books);
 } catch (err) {
