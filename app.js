@@ -1,17 +1,16 @@
 // Connect Database
-// const connectDB = require('./config/db');
-// connectDB();
+const connectDB = require('./config/db');
 
 // app.js
 const express = require('express');
 const cors = require('cors');
 
 // routes
-// const books = require('./routes/api/books');
+const books = require('./routes/api/books');
 
 const app = express();
 
-
+connectDB();
 
 // cors
 app.use(cors({ origin: true, credentials: true }));
@@ -22,7 +21,7 @@ app.use(express.json({ extended: false }));
 app.get('/', (req, res) => res.send('Hello world!'));
 
 // use Routes
-// app.use('/api/books', books);
+app.use('/api/books', books);
 
 const port = process.env.PORT || 8082;
 
