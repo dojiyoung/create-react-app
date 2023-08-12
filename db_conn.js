@@ -2,12 +2,10 @@
 
 const mongoose = require('mongoose');
 
-const connStr = "mongodb+srv://vercel-admin-user-64d7969ab915977f5618afcb:l5U61SwnOYcKGTal@cluster0.kmncufu.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
 const connectDB = async () => {
   try {
     mongoose.set('strictQuery', true);
-    await mongoose.connect(connStr, {
+    await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
     });
 
