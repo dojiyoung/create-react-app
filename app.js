@@ -5,7 +5,7 @@ const express = require('express');
 const cors = require('cors');
 
 // routes
-// const books = require('./routes/api/books');
+const books = require('./routes/api/books');
 
 const app = express();
 
