@@ -7,7 +7,7 @@ const db = config.get('mongoURI');
 const connectDB = async () => {
   try {
     mongoose.set('strictQuery', true);
-    await mongoose.connect(db, {
+    await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
     });
 
