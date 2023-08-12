@@ -26,3 +26,6 @@ app.use('/api/books', books);
 const port = process.env.PORT || 8082;
 
 app.listen(port, () => console.log(`Server running on port ${port}`));
+
+// Export the Express API
+module.exports = app
