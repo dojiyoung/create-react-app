@@ -25,7 +25,7 @@ app.get('/', (req, res) => res.send('Hello world!'));
 
 const port = 4000;
 
-app.listen(port, () => console.log(`Server running on port ${port}`));
+// app.listen(port, () => console.log(`Server running on port ${port}`));
 
 // Export the Express API
 module.exports = app
