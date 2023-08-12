@@ -16,12 +16,12 @@ const port = process.env.PORT || 8082;
 
 const errors = null;
 try {
-  const connectDB = require("./config/db");
+  const connectDB = require("./db");
 
   connectDB();
 
   // routes
-  const books = require("./routes/api/books");
+  const books = require("./books");
   // use Routes
   app.use("/api/books", books);
 } catch (err) {
